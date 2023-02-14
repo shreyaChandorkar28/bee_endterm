@@ -1,0 +1,91 @@
+import React, { useState } from "react";
+import axios from "axios";
+import { useNavigate, Link } from "react-router-dom";
+import PostJob from './PostJob'
+import NavRec from '../components/NavRec'
+import Footer from '../components/Footer'
+import './AddUser.css'
+const AddUser = () => {
+  const [book, setBook] = useState({
+    name: "",
+    position: "",
+    salary: "",
+    location: "",
+  });
+  const [error,setError] = useState(false)
+
+  const navigate = useNavigate();
+
+  const handleChange = (e) => {
+    setBook((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleClick = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.post("http://localhost:3001/books", book);
+      navigate("/PostJob");
+    } catch (err) {
+      console.log(err);
+      setError(true)
+    }
+  };
+
+  return (
+    <div>
+      <NavRec/>
+      <br/><br/>
+    <div className="form">
+      <h2>Add New job</h2>
+      <br/>
+      <label>
+        Company Name: &nbsp;
+      <input
+        type="text"
+        placeholder="Company Name"
+        name="name"
+        onChange={handleChange}
+      />
+      </label>
+      <br/><br/>
+      <label>
+        Position: &nbsp;
+      <input
+        type="text"
+        placeholder="Position"
+        name="position"
+        onChange={handleChange}
+      />
+      </label>
+      <br/><br/>
+      <label>
+        Salary: &nbsp;
+      <input
+        type="text"
+        placeholder="Salary"
+        name="salary"
+        onChange={handleChange}
+      />
+      </label>
+      <br/><br/>
+      <label>
+        Location: &nbsp;
+      <input
+        type="text"
+        placeholder="Location"
+        name="location"
+        onChange={handleChange}
+      />
+      </label>
+      <br/><br/>
+      <button onClick={handleClick}>Add</button> &nbsp; &nbsp;
+      {error && "Something went wrong!"}
+      <button><Link to="/PostJob" style={{ color: "inherit", textDecoration: "none" }}>See all jobs</Link></button>
+    </div>
+    <br/><br/><br/><br/>
+    <Footer/>
+    </div>
+  );
+};
+
+export default AddUser;

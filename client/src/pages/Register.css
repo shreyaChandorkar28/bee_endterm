@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Josefin+Sans&family=Outfit:wght@100;200;300;400;500;800;900&family=Poppins:wght@300&display=swap');
+.main{
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    text-align:center;
+    flex-direction: row;
+    /* color: white; */
+    background-color: rgb(250,246,243);
+    padding-left: 20px;
+    font-family: 'Bree Serif', serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Outfit', sans-serif;
+font-family: 'Poppins', sans-serif;
+}
+.registrstion{
+    padding: 5rem;
+    padding-top: 2rem;
+    /* border: 2px solid black; */
+    border-radius: 10px;
+    margin: 0.5rem;
+    margin-top: 50px;
+    margin-left: 250px;
+    background-color: rgb(255, 251, 251);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+}
+/* img{
+    padding-right: 20px;
+    width: 240px;
+    height: 240px;
+    margin-left: 150px;
+    /* border-radius: 50%; */
+input{
+    height: 30px;
+    text-align: center;
+}
+button{
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(38,76,18);
+    color: white;
+}
+.imm{
+    padding-right: 20px;
+    width: 240px;
+    height: 240px;
+    margin-left: 150px;
+    /* border-radius: 50%; */    
+}
+h1{
+    font-weight: bolder;
+}

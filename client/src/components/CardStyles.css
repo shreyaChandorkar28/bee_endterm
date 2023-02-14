@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Josefin+Sans&family=Outfit:wght@100;200;300;400;500;800;900&family=Poppins:wght@300&display=swap');
+.ca{
+    font-family: 'Bree Serif', serif;
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Outfit', sans-serif;
+font-family: 'Poppins', sans-serif;
+display: inline-flex;
+width: 200px;
+height: 100px;
+text-align: center;
+justify-content: center;
+margin-top: 10px;
+
+/* padding: 80px; */
+}
